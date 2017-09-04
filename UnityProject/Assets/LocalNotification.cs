@@ -29,7 +29,7 @@ public class LocalNotification
         {
             pluginClass.CallStatic("SetNotification", id, delayMs, title, message, message, 
                 sound ? 1 : 0, vibrate ? 1 : 0, lights ? 1 : 0, bigIcon, "notify_icon_small", 
-        bgColor.r * 65536 + bgColor.g * 256 + bgColor.b, Application.bundleIdentifier);
+        bgColor.r * 65536 + bgColor.g * 256 + bgColor.b, Application.identifier);
         }
         return id;
         #elif UNITY_IOS && !UNITY_EDITOR
@@ -68,7 +68,7 @@ public class LocalNotification
         {
             pluginClass.CallStatic("SetRepeatingNotification", id, delayMs, title, message, message, timeoutMs, 
                 sound ? 1 : 0, vibrate ? 1 : 0, lights ? 1 : 0, bigIcon, "notify_icon_small", 
-                bgColor.r * 65536 + bgColor.g * 256 + bgColor.b, Application.bundleIdentifier);
+                bgColor.r * 65536 + bgColor.g * 256 + bgColor.b, Application.identifier);
         }
         return id;
         #elif UNITY_IOS && !UNITY_EDITOR
